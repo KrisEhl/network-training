@@ -6,4 +6,5 @@ RAY_ENABLE_WINDOWS_OR_OSX_CLUSTER=1 uv run ray start \
                             --port=$RAY_API_SERVER_PORT \
                             --node-ip-address $RAY_API_SERVER_IP \
                             --dashboard-host=0.0.0.0 \
-                            --dashboard-port=8265
+                            --dashboard-port=8265 \
+                            --ray-client-server-port=10001
