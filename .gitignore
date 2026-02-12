@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# prometheus
+prometheus-3.9.1.linux-amd64
+
+# data
+data
+*.tar.gz
