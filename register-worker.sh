@@ -1,1 +1,2 @@
+echo Listening on $RAY_API_SERVER_ADDRESS
 uv run ray start --address=$RAY_API_SERVER_ADDRESS
