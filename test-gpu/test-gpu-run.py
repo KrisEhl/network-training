@@ -2,8 +2,10 @@ import os
 import ray
 import torch  # Assumes CUDA/torch on GPU node
 
+address = f"ray://{os.environ['RAY_API_SERVER_IP']}:{os.environ['RAY_API_SERVER_PORT']}"
+print(f"{address=}")
 ray.init(
-    address=f"ray://{os.environ['RAY_API_SERVER_IP']}:{os.environ['RAY_API_SERVER_PORT']}"
+    address=address
 )  # Connect to cluster
 
 
