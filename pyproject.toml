@@ -5,15 +5,14 @@ description = "Allows setup of ray cluster"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "py-spy>=0.4.1",
     "ray[default]>=2.53.0",
-    "test-gpu",
 ]
+
+[tool.setuptools.packages.find]
+exclude = ["data*", "catboost_info*", "prometheus*"]  # Glob patterns
 
 [tool.uv.workspace]
 members = [
     "test-gpu",
+    "."
 ]
-
-[tool.uv.sources]
-test-gpu = { workspace = true }

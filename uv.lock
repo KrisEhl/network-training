@@ -745,17 +745,11 @@ name = "network-training"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "py-spy" },
     { name = "ray", extra = ["default"] },
-    { name = "test-gpu" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "py-spy", specifier = ">=0.4.1" },
-    { name = "ray", extras = ["default"], specifier = ">=2.53.0" },
-    { name = "test-gpu", editable = "test-gpu" },
-]
+requires-dist = [{ name = "ray", extras = ["default"], specifier = ">=2.53.0" }]
 
 [[package]]
 name = "networkx"
@@ -1450,7 +1444,7 @@ wheels = [
 [[package]]
 name = "test-gpu"
 version = "0.1.0"
-source = { editable = "test-gpu" }
+source = { virtual = "test-gpu" }
 dependencies = [
     { name = "network-training" },
     { name = "torch" },
