@@ -6,4 +6,13 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "ray[default]>=2.53.0",
+    "test-gpu",
 ]
+
+[tool.uv.workspace]
+members = [
+    "test-gpu",
+]
+
+[tool.uv.sources]
+test-gpu = { workspace = true }
