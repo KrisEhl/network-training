@@ -1,1 +1,2 @@
+uv sync
 ray start --address=$RAY_API_SERVER_ADDRESS
