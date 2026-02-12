@@ -1,2 +1,2 @@
 echo Listening on $RAY_API_SERVER_ADDRESS
-uv run ray start --address=$RAY_API_SERVER_ADDRESS
+RAY_ENABLE_WINDOWS_OR_OSX_CLUSTER=1 uv run ray start --address=$RAY_API_SERVER_ADDRESS
